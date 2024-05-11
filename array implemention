@@ -7,15 +7,13 @@ void createArray(int arr[], int n) {
         scanf("%d", &arr[i]);
     }
 }
-
-// Function to insert an element at a specified position
 void insertElement(int arr[], int* n, int value, int pos) {
     if (pos < 0 || pos > *n) {
         printf("Invalid position for insertion.\n");
         return;
     }
 
-    // Shift elements to the right
+    
     for (int i = *n; i > pos; i--) {
         arr[i] = arr[i - 1];
     }
@@ -24,14 +22,13 @@ void insertElement(int arr[], int* n, int value, int pos) {
     printf("Element inserted.\n");
 }
 
-// Function to delete an element from a specified position
 void deleteElement(int arr[], int* n, int pos) {
     if (pos < 0 || pos >= *n) {
         printf("Invalid position for deletion.\n");
         return;
     }
 
-    // Shift elements to the left
+
     for (int i = pos; i < *n - 1; i++) {
         arr[i] = arr[i + 1];
     }
@@ -39,7 +36,6 @@ void deleteElement(int arr[], int* n, int pos) {
     printf("Element deleted.\n");
 }
 
-// Function to display the array
 void displayArray(int arr[], int n) {
     printf("Array elements: ");
     for (int i = 0; i < n; i++) {
@@ -47,8 +43,6 @@ void displayArray(int arr[], int n) {
     }
     printf("\n");
 }
-
-// Function to search for an element
 int searchElement(int arr[], int n, int value) {
     for (int i = 0; i < n; i++) {
         if (arr[i] == value) {
