@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+
+void char_frequency(char *s) {
+  int frequency[256] = {0}; 
+
+  
+  for (int i = 0; i < strlen(s); i++) {
+    frequency[(int)s[i]]++;
+  }
+
+  for (int i = 0; i < 256; i++) {
+    if (frequency[i] > 0) {
+      printf("%c->%d\n", (char)i, frequency[i]);
+    }
+  }
+}
+
+int main() {
+  char s[] = "tree";
+  char_frequency(s);
+  return 0;
+}
